@@ -58,7 +58,7 @@
     <Compile Include="Task3.xaml.cs">
       <DependentUpon>Task3.xaml</DependentUpon>
     </Compile>
-    <Page Include="ListView1.xaml">
+    <Page Include="L.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -70,8 +70,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ListView1.xaml.cs">
-      <DependentUpon>ListView1.xaml</DependentUpon>
+    <Compile Include="L.xaml.cs">
+      <DependentUpon>L.xaml</DependentUpon>
     </Compile>
     <Compile Include="TabPanel.xaml.cs">
       <DependentUpon>TabPanel.xaml</DependentUpon>

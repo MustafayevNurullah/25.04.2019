@@ -17,11 +17,16 @@ namespace _25._04._2019
     /// <summary>
     /// Interaction logic for ListView.xaml
     /// </summary>
-    public partial class ListView : Window
+    public partial class L : Window
     {
-        public ListView()
+        public L()
         {
             InitializeComponent();
+        }
+
+        private void InitializeComponent()
+        {
+            throw new NotImplementedException();
         }
     }
 }

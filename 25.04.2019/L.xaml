@@ -5,37 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_25._04._2019"
         mc:Ignorable="d"
-        Title="ListView" Height="250" Width="600">
+        Title="L" Height="250" Width="600">
     <Grid>
-        
-        
+
+
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="6*"/>
         </Grid.RowDefinitions>
-        <DockPanel Height="100" Background="Gray" Grid.Row="0" Width="600" VerticalAlignment="Top">
+        
+        <DockPanel Height="31" Background="Gray" Grid.Row="0" Width="600" VerticalAlignment="Top" Margin="0,0,-8,0">
+       
         </DockPanel>
-            <DockPanel  Height="100"  Background="LightGray" Grid.Row="1" Width="600" VerticalAlignment="Top">
+        <DockPanel  Height="100"  Background="LightGray" Grid.Row="1" Width="600" VerticalAlignment="Top">
             <StackPanel>
                 <WrapPanel>
-                <TextBlock HorizontalAlignment="Left"  Text="Qrup adi" Width="100" Height="30"    ></TextBlock>
+                    <TextBlock HorizontalAlignment="Left"  Text="Qrup adi" Width="100" Height="30"    ></TextBlock>
                     <TextBox Height="30" Width="100"></TextBox>
                 </WrapPanel>
                 <WrapPanel>
-                <TextBlock HorizontalAlignment="Left"  Text="Xidmet novu" Width="100" Height="30"    ></TextBlock>
+                    <TextBlock HorizontalAlignment="Left"  Text="Xidmet novu" Width="100" Height="30"    ></TextBlock>
                     <ComboBox Height="30" Width="100"></ComboBox>
                 </WrapPanel>
                 <WrapPanel>
-                <TextBlock HorizontalAlignment="Left"  Text="Seviyye" Width="100" Height="30"    ></TextBlock>
+                    <TextBlock HorizontalAlignment="Left"  Text="Seviyye" Width="100" Height="30"    ></TextBlock>
                     <ComboBox Height="30" Width="100"></ComboBox>
                 </WrapPanel>
             </StackPanel>
             <StackPanel>
-                    
+
             </StackPanel>
             <StackPanel>
                 <WrapPanel>
-                </WrapPanel>    
+                </WrapPanel>
 
             </StackPanel>
             <StackPanel>
@@ -53,18 +55,17 @@
 
             </StackPanel>
             <Button Height="30" Width="100" Content="Deyis"></Button>
-                
-                
-            </DockPanel>
-        
-            <TextBlock  Height="30" Text="Qruplar" FontWeight="Bold" FontFamily="30"  Width="100" HorizontalAlignment="Center">
-            </TextBlock>
+
             
-            
-        
-        
-        
-    
-    
+        </DockPanel>
+
+        <TextBlock  Height="30" Text="Qruplar" FontWeight="Bold" FontFamily="30"  Width="100" HorizontalAlignment="Center">
+        </TextBlock>
+
+
+
+
+
+
     </Grid>
 </Window>

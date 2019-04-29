@@ -5,15 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_25._04._2019"
         mc:Ignorable="d"
-        Title="Task3" Height="450" Width="800">
+        Title="Task3" Height="350" Width="630">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="1.5*"/>
         </Grid.RowDefinitions>
-        <DockPanel Background="LightGray" Width="300" Height="130" Margin="20,10,10,10" HorizontalAlignment="Left" ></DockPanel>
-        <DockPanel Background="LightGray" Width="300" Height="130" Margin="20,10,10,10" HorizontalAlignment="Right" ></DockPanel>
-        <DockPanel Grid.Row="1" Background="LightGray" Width="800" Height="300" Margin="20,10,10,10" HorizontalAlignment="Right" ></DockPanel>
+        <WrapPanel>
+        <GroupBox Width="250" Height="150" HorizontalAlignment="Left" Header="Telebe melumati" Background="LightGray">
+                <StackPanel>
+                    <WrapPanel>
+            <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Telebe" Margin="10,10,0,0"></TextBlock>
+                        <TextBox Height="30" Width="130"></TextBox>
+             <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Telefon" Margin="10,0,0,0"></TextBlock>
+                        <TextBox Height="30" Width="130"></TextBox>
+                        <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="VesiqeNo" Margin="10,0,0,0"></TextBlock>
+                        <TextBox Height="30" Width="130"></TextBox>
+                        <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Fin" Margin="10,0,0,0"></TextBlock>
+                        <TextBox Height="30" Width="130"></TextBox>
+                    </WrapPanel>
+                </StackPanel>
+
+            </GroupBox>
+        <GroupBox Width="250" Height="150"  Header="Xususi melumat" Margin="30,0,0,0" Background="LightGray">
+
+                <StackPanel>
+                    <WrapPanel>
+                        <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Istifadeci adi" Margin="10,10,0,0"></TextBlock>
+                        <TextBox Height="30" Width="130"></TextBox>
+                        <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Qrup" Margin="10,0,0,0"></TextBlock>
+                        <ComboBox Width="130" Height="30"></ComboBox>
+                            <TextBlock Width="70" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Xidmet novu" Margin="10,0,0,0"></TextBlock>
+                        <ComboBox Width="130" Height="30"></ComboBox>
+                    </WrapPanel>
+                </StackPanel>
+            </GroupBox>
+        </WrapPanel>
+        <GroupBox Width="520" Height="550" HorizontalAlignment="Left"  Header="Xususi melumat" Margin="10,0,0,0" Background="LightGray" Grid.Row="1"></GroupBox>
+        <Button Height="30" Width="70" Content="Testiqle" Grid.Row="1" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+
 
     </Grid>
 </Window>
