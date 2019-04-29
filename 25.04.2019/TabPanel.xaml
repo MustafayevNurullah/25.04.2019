@@ -1,0 +1,77 @@
+﻿<Window x:Class="_25._04._2019.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_25._04._2019"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid>
+        <TabControl>
+            
+            <TabItem Header="Grammer">
+                <StackPanel>
+                    <WrapPanel>
+                <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Baslangic Saat"></TextBlock>
+                        <DatePicker></DatePicker>
+                    <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Muellim"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Xidmet novu"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Seviyye"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Qrup"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Bitme vaxti"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                    </WrapPanel>
+                    <ListView Height="150" ScrollViewer.HorizontalScrollBarVisibility="Visible"  >
+                        <ListView.View >
+                            <GridView >
+                                <GridViewColumn Header="Ad" Width="300"/>
+                            </GridView>
+                        </ListView.View>
+                        
+                    </ListView>
+                    <WrapPanel>
+
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Speaking">
+                <StackPanel>
+                    <WrapPanel>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Baslangic Saat"></TextBlock>
+                        <DatePicker></DatePicker>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Muellim"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Xidmet novu"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Seviyye"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Telebe"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Text="Bitme vaxti"></TextBlock>
+                        <ComboBox  Width="100"></ComboBox>
+                        <TextBlock Height="30" Width="100" Text="Mock exam"></TextBlock>
+                        <CheckBox ></CheckBox>
+                    </WrapPanel>
+                    <ListView Height="120" ScrollViewer.HorizontalScrollBarVisibility="Visible"  >
+                        <ListView.View >
+                            <GridView >
+                                <GridViewColumn Header="Ad" Width="300"/>
+                            </GridView>
+                        </ListView.View>
+
+                    </ListView>
+                    <WrapPanel>
+
+                    </WrapPanel>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+                    <Button Height="40" Width="100"  Margin="10,10,10,-340" HorizontalAlignment="Left" Content="Sil"  FontWeight="Bold"></Button>
+        <Button Height="40" Width="100" Margin="10,10,10,-340"  HorizontalAlignment="Right" Content="Ders elave et"  FontWeight="Bold"></Button>
+
+    </Grid>
+</Window>
