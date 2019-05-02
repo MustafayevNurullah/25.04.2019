@@ -41,16 +41,55 @@
                 </StackPanel>
             </GroupBox>
         </WrapPanel>
-        <GroupBox Width="520" Height="200" HorizontalAlignment="Left"  Header="Xususi melumat" Margin="10,0,0,0" Background="LightGray" Grid.Row="1">
-            <WrapPanel>
-            <TextBlock Width="130" Height="30" Margin="100,10,0 Text="Muqavile No" ></TextBlock>
-            <Button Height="30" Width="130" ></Button>
-            </WrapPanel>
+        <Button Height="30" Width="70" Content="Testiqle" Grid.Row="1" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
+        <GroupBox Width="520" Height="250" HorizontalAlignment="Left"  Header="Muqavile melumati" Margin="10,0,0,0" Background="LightGray" Grid.Row="1">
 
+            <StackPanel>
+                <WrapPanel>
+                    
+            <TextBlock Width="130" Height="30"  Text="Muqavile No" HorizontalAlignment="Left" Margin="100,10,0,0"    ></TextBlock>
+                <TextBox Width="130" Height="30" ></TextBox>
+                <TextBlock Width="130" Height="30"  Text="Tarix"  HorizontalAlignment="Left"  Margin="100,0,0,0"  ></TextBlock>
+                    <TextBox Width="130" Height="30" ></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                <TextBlock Width="70" Height="30"   Text="Muqavile No" HorizontalAlignment="Left"></TextBlock>
+                <TextBox Width="70" Height="30" Margin="10,0,0,0"></TextBox>
+                    <TextBlock Width="70" Height="30" Margin="10,0,0,0" Text="Buraxila biler" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0" ></TextBox>
+                    <TextBlock Width="100" Height="30" Margin="10,0,0,0" Text="Bir dersin miqdari" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0" ></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="70" Height="30"   Text="Mock" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0" ></TextBox>
+                    <TextBlock Width="70" Height="30" Margin="10,0,0,0"  Text="Buraxila biler" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0"></TextBox>
+                    <TextBlock Width="100" Height="30" Margin="10,0,0,0"  Text="Bir dersin miqdari" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0" ></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                    <TextBlock Width="70" Height="30"  Text="Speaking" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0"></TextBox>
+                    <TextBlock Width="70" Height="30" Margin="10,0,0,0" Text="Buraxila biler" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0"></TextBox>
+                    <TextBlock Width="100" Height="30" Margin="10,0,0,0" Text="Bir dersin miqdari" HorizontalAlignment="Left"></TextBlock>
+                    <TextBox Width="70" Height="30" Margin="10,0,0,0" ></TextBox>
+                </WrapPanel>
+                <WrapPanel>
+                  
+                <TextBlock Width="70" Height="30"  Text="Guzest" Margin="40,0,0,0"></TextBlock>
+                <TextBox Width="80" Height="30" ></TextBox>
+                    <TextBlock Width="90" Height="30"  Text="Xidmet haqqi" Margin="10,0,0,0"></TextBlock>
+                    <TextBox Width="80" Height="30" ></TextBox>
+                </WrapPanel>
+
+
+            </StackPanel>
+           
 
 
         </GroupBox>
-        <Button Height="30" Width="70" Content="Testiqle" Grid.Row="1" Margin="0,0,10,10" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Button>
 
 
     </Grid>

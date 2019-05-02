@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _25._04._2019.Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,18 +16,15 @@ using System.Windows.Shapes;
 namespace _25._04._2019
 {
     /// <summary>
-    /// Interaction logic for ListView.xaml
+    /// Interaction logic for Task2.xaml
     /// </summary>
-    public partial class L : Window
+    public partial class Task2 : Window
     {
-        public L()
+        public Task2()
         {
             InitializeComponent();
-        }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
+          
         }
     }
 }

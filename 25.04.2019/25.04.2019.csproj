@@ -55,13 +55,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entity\Filial.cs" />
+    <Compile Include="Entity\Qruplar.cs" />
+    <Compile Include="Entity\Seviyye.cs" />
+    <Compile Include="Entity\XidmetNovu.cs" />
+    <Compile Include="Task2.xaml.cs">
+      <DependentUpon>Task2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Task3.xaml.cs">
       <DependentUpon>Task3.xaml</DependentUpon>
     </Compile>
-    <Page Include="L.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="ViewModel\BaseView.cs" />
+    <Compile Include="ViewModel\QruplarView.cs" />
     <Page Include="TabPanel.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -70,13 +75,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="L.xaml.cs">
-      <DependentUpon>L.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TabPanel.xaml.cs">
       <DependentUpon>TabPanel.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Task2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Task3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -108,5 +114,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
