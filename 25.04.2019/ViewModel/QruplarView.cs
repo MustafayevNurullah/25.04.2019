@@ -39,6 +39,10 @@ namespace _25._04._2019.ViewModel
             set
             {
                 SelectQruplar = value;
+                if(value!=null)
+                {
+                     currentQruplar = selectQruplar.Clone();
+                }
                 OnpropertyChanged(new PropertyChangedEventArgs(nameof(selectQruplar)));
 
             }
@@ -64,13 +68,10 @@ namespace _25._04._2019.ViewModel
                 OnpropertyChanged(new PropertyChangedEventArgs("groups"));
             }
         }
-        public List<Filial> Filials = new List<Filial>();
-        public List<XidmetNovu> XidmetNovu = new List<XidmetNovu>();
-        public List<Seviyye> Seviyyes = new List<Seviyye>();
-      
-
-
-
+ 
+        public List<Filial> Filials { get; set; }
+        public List<XidmetNovu> XidmetNovu { get; set; }
+        public List<Seviyye> Seviyyes { get; set; }
 
 
     }

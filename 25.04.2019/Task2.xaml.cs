@@ -117,12 +117,12 @@ namespace _25._04._2019
                 }
 
             };
-            
-
-
-          
+            DataContext = qruplarVM;
         }
 
-      
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -15,5 +15,25 @@ namespace _25._04._2019.Entity
         public Filial Filiali { get; set; }
         public XidmetNovu Xidmetnovu { get; set; }
         public Seviyye Seviyye { get; set; }
+
+        public Qruplar Clone()
+        {
+
+
+
+            Qruplar qrupClone = new Qruplar();
+            qrupClone.Filiali = this.Filiali;
+            qrupClone.Id = this.Id;
+            qrupClone.Qeyd = this.Qeyd;
+            qrupClone.QrupAdi = this.QrupAdi;
+            qrupClone.Seviyye = this.Seviyye;
+            qrupClone.Xidmetnovu = this.Xidmetnovu;
+
+            return qrupClone;
+
+        }
+
+
+
     }
 }
