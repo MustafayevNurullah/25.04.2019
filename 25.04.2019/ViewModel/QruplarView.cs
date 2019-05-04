@@ -11,6 +11,44 @@ namespace _25._04._2019.ViewModel
 {
     class QruplarView : BaseView
     {
+
+       private Qruplar CurrentQruplar;
+       public  Qruplar currentQruplar
+        {
+            get
+            {
+
+                return CurrentQruplar;
+            }
+            set
+            {
+                CurrentQruplar = value;
+                OnpropertyChanged(new PropertyChangedEventArgs(nameof(currentQruplar)));
+
+            }
+        }
+
+        private Qruplar SelectQruplar;
+        public Qruplar selectQruplar
+        {
+            get
+            {
+
+                return SelectQruplar;
+            }
+            set
+            {
+                SelectQruplar = value;
+                OnpropertyChanged(new PropertyChangedEventArgs(nameof(selectQruplar)));
+
+            }
+        }
+
+
+
+
+
+
         private ObservableCollection<Qruplar> Groups;
 
         public ObservableCollection<Qruplar> groups
@@ -26,57 +64,10 @@ namespace _25._04._2019.ViewModel
                 OnpropertyChanged(new PropertyChangedEventArgs("groups"));
             }
         }
-        private List<Filial> filials = new List<Filial>();
-        public List<Filial> Filials
-        {
-            get
-            {
-
-                return filials;
-            }
-            set
-            {
-                filials = value;
-                OnpropertyChanged(new PropertyChangedEventArgs("Filials"));
-
-            }
-        }
-
-        private List<XidmetNovu> XidmetNovu = new List<XidmetNovu>();
-        public List<XidmetNovu> xidmetNovu_
-        {
-
-            get
-            {
-                return XidmetNovu;
-            }
-            set
-            {
-
-                XidmetNovu = value;
-                OnpropertyChanged( new PropertyChangedEventArgs("xidmetNovu_"));
-
-            }
-
-        }
-
-        private List<Seviyye> Seviyyes = new List<Seviyye>();
-        public List<Seviyye> seviyyes
-        {
-
-            get
-            {
-                return Seviyyes;
-            }
-            set
-            {
-
-                Seviyyes = value;
-                OnpropertyChanged(new PropertyChangedEventArgs("seviyyes"));
-
-            }
-
-        }
+        public List<Filial> Filials = new List<Filial>();
+        public List<XidmetNovu> XidmetNovu = new List<XidmetNovu>();
+        public List<Seviyye> Seviyyes = new List<Seviyye>();
+      
 
 
 
