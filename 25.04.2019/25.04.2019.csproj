@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Command\Deyis.cs" />
+    <Compile Include="Command\ElaveEt.cs" />
     <Compile Include="Entity\Filial.cs" />
     <Compile Include="Entity\Qruplar.cs" />
     <Compile Include="Entity\Seviyye.cs" />

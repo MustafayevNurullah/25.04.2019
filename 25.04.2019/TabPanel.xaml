@@ -70,8 +70,11 @@
                 </StackPanel>
             </TabItem>
         </TabControl>
-                    <Button Height="40" Width="100"  Margin="10,10,10,-340" HorizontalAlignment="Left" Content="Sil"  FontWeight="Bold"></Button>
-        <Button Height="40" Width="100" Margin="10,10,10,-340"  HorizontalAlignment="Right" Content="Ders elave et"  FontWeight="Bold"></Button>
+                    <Button Height="40" Width="100"  Margin="10,10,10,-340" HorizontalAlignment="Left" Content="Sil" Name="Delete"  FontWeight="Bold">
+        
+                        
+                    </Button>
+        <Button Height="40" Width="100" Margin="10,10,10,-340"  HorizontalAlignment="Right" Content="Ders elave et" Name="add"  FontWeight="Bold"></Button>
 
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using _25._04._2019.Entity;
+﻿using _25._04._2019.Command;
+using _25._04._2019.Entity;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,18 +7,19 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace _25._04._2019.ViewModel
 {
     class QruplarView : BaseView
     {
-
+        public ElaveEt Add => new ElaveEt(this);
        private Qruplar CurrentQruplar;
-       public  Qruplar currentQruplar
+
+        public Qruplar currentQruplar
         {
             get
             {
-
                 return CurrentQruplar;
             }
             set
