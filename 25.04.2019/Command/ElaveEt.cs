@@ -16,7 +16,7 @@ namespace _25._04._2019.Command
         {
             qruplarView = QruplarView;
         }
-
+      
 
         public event EventHandler CanExecuteChanged;
 
@@ -27,13 +27,14 @@ namespace _25._04._2019.Command
 
         public void Execute(object parameter)
         {
-            // var item = qruplarView.groups.FirstOrDefault(x => x.Id==qruplarView.currentQruplar.Id);
+             var item = qruplarView.groups.FirstOrDefault(x => x.Id==qruplarView.currentQruplar.Id);
 
             qruplarView.groups.Add(qruplarView.currentQruplar);
             //if(item==null)
             //{
             //}
-
+            qruplarView.state = 2;
+            
         }
     }
 }

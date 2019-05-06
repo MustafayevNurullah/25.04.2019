@@ -20,13 +20,14 @@
         </Grid.RowDefinitions>
 
         <DockPanel Height="31" Background="Gray" Grid.Row="0" Width="600" VerticalAlignment="Top" Grid.ColumnSpan="2" >
-
+           
         </DockPanel>
         <DockPanel  Height="100"  Background="LightGray" Grid.Row="1" Width="600" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+            
             <StackPanel>
                 <WrapPanel>
                     <TextBlock HorizontalAlignment="Left"  Text="Qrup adi" Width="100" Height="30"    ></TextBlock>
-                    <TextBox Height="30" Width="100 " Text="{Binding currentQruplar.QrupAdi,Mode=TwoWay}" ></TextBox>
+                    <TextBox Height="30" Width="100 " Text="{Binding currentQruplar.QrupAdi,Mode=TwoWay}" Name="QrupAdi" ></TextBox>
                 </WrapPanel>
                 
                 <WrapPanel>
@@ -62,11 +63,60 @@
                 <TextBox Height="50" VerticalAlignment="Top" Width="100 " Text="{Binding currentQruplar.Qeyd,Mode=TwoWay}"></TextBox>
             </StackPanel>
             <StackPanel>
-                <Button Height="30" Width="100"   HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding Add}" Content="Elave et" Name="Add">
-                   
+                <Button Height="30" Width="100"   HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding Add}" Content="Elave et" Name="Add" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                    </MultiDataTrigger.Conditions>
+                                </MultiDataTrigger>
+                                <DataTrigger  Binding="{Binding state, Mode=TwoWay}" Value="1">
+                                    <Setter Property="IsEnabled" Value="True"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers >
+                            <Setter Property="IsEnabled" Value="False"></Setter>
+                            
+                        </Style >
+                        
+                    </Button.Style>
+
+                    
+                    
                 </Button>
-                <Button Name="Deyis" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Deyis" ></Button>
-                <Button Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Imtina" IsEnabled="False"></Button>
+                <Button Name="Deyis" Height="30" Width="100" HorizontalAlignment="Right" Command="{Binding Update}" VerticalAlignment="Top" Content="Deyis" >
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Style.Triggers>
+                                <DataTrigger  Binding="{Binding state, Mode=TwoWay}" Value="2">
+                                    <Setter Property="IsEnabled" Value="True"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers >
+                            <Setter Property="IsEnabled" Value="False"></Setter>
+                        </Style >
+
+
+                    </Button.Style>
+
+
+                </Button>
+                <Button Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Imtina" IsEnabled="False">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding state, Mode=TwoWay}" Value="3">
+                                    <Setter Property="IsEnabled" Value="True"></Setter>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Setter Property="IsEnabled" Value="False"></Setter>
+                        </Style>
+                        
+                        
+                    </Button.Style>
+                    
+                    
+                    
+                </Button>
 
             </StackPanel>
             <Button Height="30" Width="100" Content="Deyis"></Button>
@@ -78,7 +128,10 @@
         </TextBlock>
 
         <ListView Name="List" Height="90"  SelectedItem="{Binding selectQruplar }" ItemsSource="{Binding groups}" Grid.Row="1"  VerticalAlignment="Bottom" Grid.ColumnSpan="2">
-       
+           
+            
+            
+            
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="No" Width="30"></GridViewColumn>

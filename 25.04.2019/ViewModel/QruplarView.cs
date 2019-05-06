@@ -14,8 +14,30 @@ namespace _25._04._2019.ViewModel
     class QruplarView : BaseView
     {
         public ElaveEt Add => new ElaveEt(this);
-       private Qruplar CurrentQruplar;
+        public Deyis Update => new Deyis(this);
+        public QruplarView()
+        {
+            CurrentQruplar = new Qruplar();
+            SelectQruplar = new Qruplar();
+        }
+       private Qruplar CurrentQruplar ;
+    private int State;
+       
+        public int state
+        {
+            get
+            {
 
+                return State;
+            }
+            set
+            {
+                State = value;
+
+                OnpropertyChanged(new PropertyChangedEventArgs(nameof(state)));
+
+            }
+        }  
         public Qruplar currentQruplar
         {
             get

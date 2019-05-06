@@ -8,16 +8,9 @@ using System.Windows.Input;
 
 namespace _25._04._2019.Command
 {
-    class Deyis : ICommand
+    class Imtina : ICommand
     {
-       public QruplarView qruplarView { get; set; }
-        public Deyis(QruplarView QruplarView)
-        {
-
-            qruplarView = QruplarView;
-
-
-        }
+        public QruplarView qruplarView { get; set; }
 
         public event EventHandler CanExecuteChanged;
 
@@ -25,11 +18,10 @@ namespace _25._04._2019.Command
         {
             return true;
         }
-
+        
         public void Execute(object parameter)
         {
-            qruplarView.state = 1;
-
+            qruplarView.state = 3;
         }
     }
 }

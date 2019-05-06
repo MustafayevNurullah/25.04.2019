@@ -26,6 +26,7 @@ namespace _25._04._2019
         {
             InitializeComponent();
             QruplarView qruplarVM = new QruplarView();
+            qruplarVM.state = 1;
             qruplarVM.groups = new ObservableCollection<Qruplar>()
             {
                 new Qruplar()
@@ -120,6 +121,6 @@ namespace _25._04._2019
             DataContext = qruplarVM;
         }
 
-      
+       
     }
 }
