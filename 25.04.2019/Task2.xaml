@@ -114,7 +114,7 @@
 
 
                 </Button>
-                <Button Height="30" Width="100" HorizontalAlignment="Right" Command="{Binding imtina}" VerticalAlignment="Top" Content="Imtina" >
+                <Button Height="30" Width="100" HorizontalAlignment="Right" Command="{Binding imtina}" VerticalAlignment="Top" Content="Imtina"  >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Style.Triggers>
@@ -142,10 +142,16 @@
         </TextBlock>
 
         <ListView Name="List" Height="90"  SelectedItem="{Binding selectQruplar }" ItemsSource="{Binding groups}" Grid.Row="1"  VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+        
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="No" Width="30" >
-                        
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Padding="5,0" Text="{Binding Id}" TextAlignment="Center" VerticalAlignment="Center">
+                                </TextBlock>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Qrup adi" Width="100">
                         <GridViewColumn.CellTemplate>

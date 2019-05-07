@@ -30,7 +30,9 @@ namespace _25._04._2019.Command
              var item = qruplarView.groups.FirstOrDefault(x => x.Id==qruplarView.currentQruplar.Id);
             if (item == null)
             {
+                int count = qruplarView.groups.Count;
             qruplarView.groups.Add(qruplarView.currentQruplar);
+                qruplarView.groups[count].Id = count + 1;
             }
             qruplarView.currentQruplar = new Entity.Qruplar();
             

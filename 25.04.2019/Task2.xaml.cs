@@ -121,6 +121,6 @@ namespace _25._04._2019
             DataContext = qruplarVM;
         }
 
-       
+      
     }
 }

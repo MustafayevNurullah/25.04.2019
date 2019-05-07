@@ -35,6 +35,7 @@ namespace _25._04._2019.Command
                 var index = qruplarView.groups.IndexOf(item);
                 qruplarView.groups[index] = qruplarView.currentQruplar;
                 qruplarView.currentQruplar = new Entity.Qruplar();
+                qruplarView.selectQruplar = null;
                 qruplarView.selectQruplar = new Entity.Qruplar();
             }
 
