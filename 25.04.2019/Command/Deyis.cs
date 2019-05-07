@@ -28,6 +28,17 @@ namespace _25._04._2019.Command
 
         public void Execute(object parameter)
         {
+            var item = qruplarView.groups.FirstOrDefault(x => x.Id == qruplarView.currentQruplar.Id);
+
+            if (item != null)
+            {
+                var index = qruplarView.groups.IndexOf(item);
+                qruplarView.groups[index] = qruplarView.currentQruplar;
+                qruplarView.currentQruplar = new Entity.Qruplar();
+                qruplarView.selectQruplar = new Entity.Qruplar();
+            }
+
+
             qruplarView.state = 1;
 
         }

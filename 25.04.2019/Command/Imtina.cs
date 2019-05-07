@@ -12,6 +12,14 @@ namespace _25._04._2019.Command
     {
         public QruplarView qruplarView { get; set; }
 
+
+        public Imtina ( QruplarView QruplarView)
+        {
+            qruplarView = QruplarView;
+
+
+        }
+
         public event EventHandler CanExecuteChanged;
 
         public bool CanExecute(object parameter)
@@ -21,7 +29,9 @@ namespace _25._04._2019.Command
         
         public void Execute(object parameter)
         {
-            qruplarView.state = 3;
+            qruplarView.currentQruplar = new Entity.Qruplar();    
         }
+        
     }
+    
 }

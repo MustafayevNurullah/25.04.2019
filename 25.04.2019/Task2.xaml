@@ -26,19 +26,21 @@
             
             <StackPanel>
                 <WrapPanel>
-                    <TextBlock HorizontalAlignment="Left"  Text="Qrup adi" Width="100" Height="30"    ></TextBlock>
-                    <TextBox Height="30" Width="100 " Text="{Binding currentQruplar.QrupAdi,Mode=TwoWay}" Name="QrupAdi" ></TextBox>
+                    <TextBlock HorizontalAlignment="Left"  Text="Qrup adi" Width="100" Height="30"    >
+                        
+                    </TextBlock>
+                    <TextBox Height="30" Width="100 " Text="{Binding currentQruplar.QrupAdi,Mode=TwoWay}"  Name="QrupAdi" >
+                    </TextBox>
                 </WrapPanel>
-                
                 <WrapPanel>
                     <TextBlock HorizontalAlignment="Left"  Text="Xidmet novu" Width="100" Height="30"    ></TextBlock>
-                    <ComboBox Height="30" Width="100"  ItemsSource="{Binding XidmetNovu}" DisplayMemberPath="XidmetNovu_"
+                    <ComboBox Name="XidmetNovu" Height="30" Width="100"  ItemsSource="{Binding XidmetNovu}" DisplayMemberPath="XidmetNovu_"
                               SelectedItem="{Binding currentQruplar.Xidmetnovu}" SelectedValuePath="Id"
                               SelectedValue="{Binding currentQruplar.Xidmetnovu.Id,Mode=TwoWay}"></ComboBox>
                 </WrapPanel>
                 <WrapPanel>
                     <TextBlock HorizontalAlignment="Left"  Text="Seviyye" Width="100" Height="30"></TextBlock>
-                    <ComboBox Height="30" Width="100" ItemsSource="{Binding Seviyyes}" DisplayMemberPath="Seviyye_"
+                    <ComboBox Name="Seviyye" Height="30" Width="100" ItemsSource="{Binding Seviyyes}" DisplayMemberPath="Seviyye_"
                               SelectedItem="{Binding currentQruplar.Seviyye}" SelectedValuePath="Id"
                               SelectedValue="{Binding currentQruplar.Seviyye.Id,Mode=TwoWay}" ></ComboBox>
                 </WrapPanel>
@@ -56,26 +58,38 @@
                 <TextBlock Margin="100,0,0,0" Height="30" VerticalAlignment="Top" Text="Qeyd" Width="100" ></TextBlock>
             </StackPanel>
             <StackPanel>
-                <ComboBox Height="30" Width="100" ItemsSource="{Binding Filials}" DisplayMemberPath="Filiali"
+                <ComboBox Name="Filial" Height="30" Width="100" ItemsSource="{Binding Filials}" DisplayMemberPath="Filiali"
                               SelectedItem="{Binding currentQruplar.Filiali }" SelectedValuePath="Id"
                               SelectedValue="{Binding currentQruplar.Filiali.Id ,Mode=TwoWay}"></ComboBox>
 
-                <TextBox Height="50" VerticalAlignment="Top" Width="100 " Text="{Binding currentQruplar.Qeyd,Mode=TwoWay}"></TextBox>
+                <TextBox Height="50" Name="Qeyd" VerticalAlignment="Top" Width="100 " Text="{Binding currentQruplar.Qeyd,Mode=TwoWay}">
+
+                
+
+                </TextBox>
             </StackPanel>
             <StackPanel>
                 <Button Height="30" Width="100"   HorizontalAlignment="Right" VerticalAlignment="Top" Command="{Binding Add}" Content="Elave et" Name="Add" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Style.Triggers>
-                                <MultiDataTrigger>
-                                    <MultiDataTrigger.Conditions>
-                                    </MultiDataTrigger.Conditions>
-                                </MultiDataTrigger>
-                                <DataTrigger  Binding="{Binding state, Mode=TwoWay}" Value="1">
-                                    <Setter Property="IsEnabled" Value="True"></Setter>
+                                <DataTrigger Binding="{Binding Text.Length, ElementName=QrupAdi, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text.Length, ElementName=Seviyye, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text.Length, ElementName=Filial, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Text.Length, ElementName=XidmetNovu, UpdateSourceTrigger=PropertyChanged}" Value="0">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger  Binding="{Binding state, Mode=TwoWay}" Value="2">
+                                        <Setter Property="IsEnabled" Value="False"></Setter>
                                 </DataTrigger>
                             </Style.Triggers >
-                            <Setter Property="IsEnabled" Value="False"></Setter>
+                            <Setter Property="IsEnabled" Value="True"></Setter>
                             
                         </Style >
                         
@@ -100,15 +114,15 @@
 
 
                 </Button>
-                <Button Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Top" Content="Imtina" IsEnabled="False">
+                <Button Height="30" Width="100" HorizontalAlignment="Right" Command="{Binding imtina}" VerticalAlignment="Top" Content="Imtina" >
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding state, Mode=TwoWay}" Value="3">
+                                <DataTrigger Binding="{Binding state, Mode=TwoWay}" Value="2">
                                     <Setter Property="IsEnabled" Value="True"></Setter>
                                 </DataTrigger>
                             </Style.Triggers>
-                            <Setter Property="IsEnabled" Value="False"></Setter>
+                            <Setter Property="IsEnabled" Value="True"></Setter>
                         </Style>
                         
                         
@@ -128,13 +142,11 @@
         </TextBlock>
 
         <ListView Name="List" Height="90"  SelectedItem="{Binding selectQruplar }" ItemsSource="{Binding groups}" Grid.Row="1"  VerticalAlignment="Bottom" Grid.ColumnSpan="2">
-           
-            
-            
-            
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="No" Width="30"></GridViewColumn>
+                    <GridViewColumn Header="No" Width="30" >
+                        
+                    </GridViewColumn>
                     <GridViewColumn Header="Qrup adi" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>

@@ -15,6 +15,7 @@ namespace _25._04._2019.ViewModel
     {
         public ElaveEt Add => new ElaveEt(this);
         public Deyis Update => new Deyis(this);
+        public Imtina imtina => new Imtina(this);
         public QruplarView()
         {
             CurrentQruplar = new Qruplar();
@@ -22,7 +23,6 @@ namespace _25._04._2019.ViewModel
         }
        private Qruplar CurrentQruplar ;
     private int State;
-       
         public int state
         {
             get
@@ -55,13 +55,14 @@ namespace _25._04._2019.ViewModel
         private Qruplar SelectQruplar;
         public Qruplar selectQruplar
         {
+           
             get
             {
-
                 return SelectQruplar;
             }
             set
             {
+                state = 2;
                 SelectQruplar = value;
                 if(value!=null)
                 {
@@ -71,14 +72,7 @@ namespace _25._04._2019.ViewModel
 
             }
         }
-
-
-
-
-
-
         private ObservableCollection<Qruplar> Groups;
-
         public ObservableCollection<Qruplar> groups
         {
             get
