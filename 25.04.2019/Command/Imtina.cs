@@ -29,6 +29,7 @@ namespace _25._04._2019.Command
         
         public void Execute(object parameter)
         {
+            qruplarView.state = 1;
             qruplarView.currentQruplar = new Entity.Qruplar();    
         }
         
