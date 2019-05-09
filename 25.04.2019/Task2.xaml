@@ -8,21 +8,22 @@
            Title="Task2" Height="250" Width="600">
     
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="169*"/>
-            <ColumnDefinition Width="127*"/>
-        </Grid.ColumnDefinitions>
+     
 
 
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition Height="6*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <DockPanel Height="31" Background="Gray" Grid.Row="0" Width="600" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+        <DockPanel  Background="Gray" Grid.Row="0"  VerticalAlignment="Stretch"
+HorizontalAlignment="Stretch"
+                    Grid.ColumnSpan="2" >
            
         </DockPanel>
-        <DockPanel  Height="100"  Background="LightGray" Grid.Row="1" Width="600" VerticalAlignment="Top" Grid.ColumnSpan="2" >
+        <DockPanel   Background="LightGray" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+                     Grid.ColumnSpan="2" >
             
             <StackPanel>
                 <WrapPanel>
@@ -86,17 +87,17 @@
                                     <Setter Property="IsEnabled" Value="False"/>
                                 </DataTrigger>
                                 <DataTrigger  Binding="{Binding state, Mode=TwoWay}" Value="2">
-                                        <Setter Property="IsEnabled" Value="False"></Setter>
+                                    <Setter Property="IsEnabled" Value="False"></Setter>
                                 </DataTrigger>
                             </Style.Triggers >
                             <Setter Property="IsEnabled" Value="True"></Setter>
-                            
+
                         </Style >
-                        
+
                     </Button.Style>
 
-                    
-                    
+
+
                 </Button>
                 <Button Name="Deyis" Height="30" Width="100" HorizontalAlignment="Right" Command="{Binding Update}" VerticalAlignment="Top" Content="Deyis" >
                     <Button.Style>
@@ -124,16 +125,15 @@
                             </Style.Triggers>
                             <Setter Property="IsEnabled" Value="True"></Setter>
                         </Style>
-                        
-                        
+
+
                     </Button.Style>
-                    
-                    
-                    
+
+
+
                 </Button>
 
             </StackPanel>
-            <Button Height="30" Width="100" Content="Deyis"></Button>
 
 
         </DockPanel>
@@ -141,7 +141,7 @@
         <TextBlock  Height="30" Text="Qruplar" FontWeight="Bold" FontFamily="30"  Width="100" HorizontalAlignment="Center" Grid.ColumnSpan="2" Margin="246,0,246,1">
         </TextBlock>
 
-        <ListView Name="List" Height="90"  SelectedItem="{Binding selectQruplar }" ItemsSource="{Binding groups}" Grid.Row="1"  VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+        <ListView Name="List"   SelectedItem="{Binding selectQruplar }" ItemsSource="{Binding groups}" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.ColumnSpan="2">
         
             <ListView.View>
                 <GridView>
