@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_25._04._2019"
         mc:Ignorable="d"
-        Title="Task3" Height="400" Width="630">
+        Title="Task3" Height="400" MaxHeight="400" MinHeight="400" MaxWidth="630" MinWidth="630" Width="630">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
